@@ -7,11 +7,10 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
-  date = new Date();
   quotes: Quote[] = [
-    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, this.date),
-    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, this.date),
-    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, this.date),
+    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, new Date(2017, 5, 20)),
+    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, new Date(2015, 2, 15)),
+    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, new Date(2019, 9, 2)),
   ];
   addNewQuote(quote) {
     this.quotes.push(quote);
