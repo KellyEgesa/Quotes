@@ -1,23 +1,37 @@
-<form action="">
+<form #goalForm="ngForm" (ngSubmit)="submitQuote(goalForm)">
   <div class="form-group">
     <label for="quote">QUOTE</label>
     <textarea
       name="quotes"
+      [(ngModel)]="newQuote.quote"
       id=""
       class="form-control"
       cols="30"
       rows="5"
+      name="quote"
     ></textarea>
+    {{ newQuote.quote }}
   </div>
   <div class="row">
     <div class="form-group col">
       <label for="author">AUTHOR</label>
-      <input type="text" class="form-control" />
+      <input
+        type="text"
+        [(ngModel)]="newQuote.author"
+        class="form-control"
+        name="author"
+      />
     </div>
     <div class="form-group col">
       <label for="quote-submitter">QUOTE SUBMITTER</label>
-      <input type="text" class="form-control" />
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="newQuote.quoteSubmitter"
+        name="quoteSubmitter"
+      />
+      {{ newQuote.quoteSubmitter }}
     </div>
   </div>
-  <button class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-success">Submit</button>
 </form>

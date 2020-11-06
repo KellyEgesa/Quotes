@@ -9,32 +9,13 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   date = new Date();
   quotes: Quote[] = [
-    {
-      author: 'author',
-      quote: 'quote',
-      quoteSubmitter: 'quoteSubmitter',
-      upVote: 1,
-      downVote: 3,
-      timePast: this.date,
-    },
-    {
-      author: 'author',
-      quote: 'quote',
-      quoteSubmitter: 'quoteSubmitter',
-      upVote: 1,
-      downVote: 3,
-      timePast: this.date,
-    },
-    {
-      author: 'author',
-      quote: 'quote',
-      quoteSubmitter: 'quoteSubmitter',
-      upVote: 1,
-      downVote: 3,
-      timePast: this.date,
-    },
+    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, this.date),
+    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, this.date),
+    new Quote('author', 'quote', 'quoteSubmitter', 1, 3, this.date),
   ];
-
+  addNewQuote(quote) {
+    this.quotes.push(quote);
+  }
   constructor() {}
 
   ngOnInit(): void {}
