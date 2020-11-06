@@ -1,6 +1,9 @@
 <div>
   <h1>QUOTES</h1>
   <hr />
+  <div *ngFor="let item of quotes">
+    {{ item.author }}
+  </div>
   <app-form-quotes></app-form-quotes>
-  <app-display-qoutes></app-display-qoutes>
+  <app-display-qoutes [quotes]="quotes"></app-display-qoutes>
 </div>
