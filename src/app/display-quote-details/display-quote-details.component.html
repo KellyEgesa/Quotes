@@ -3,7 +3,7 @@
   <div (click)="upVote(index)" class="btn btn-primary m-2">
     UPVOTE <span class="badge badge-success">{{ quote[index].upVote }} </span>
   </div>
-  <div class="btn btn-primary m-2">
+  <div (click)="downVote(index)" class="btn btn-primary m-2">
     DOWNVOTE <span class="badge badge-danger">{{ quote[index].downVote }}</span>
   </div>
 </div>

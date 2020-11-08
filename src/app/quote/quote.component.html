@@ -2,5 +2,8 @@
   <h1>QUOTES</h1>
   <hr />
   <app-form-quotes (addQuote)="addNewQuote($event)"></app-form-quotes>
-  <app-display-qoutes [quotes]="quotes"></app-display-qoutes>
+  <app-display-qoutes
+    [quotes]="quotes"
+    (toDelete)="delete($event)"
+  ></app-display-qoutes>
 </div>

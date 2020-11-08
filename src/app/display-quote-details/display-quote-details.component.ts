@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -12,6 +12,10 @@ export class DisplayQuoteDetailsComponent implements OnInit {
 
   upVote(index) {
     this.quote[index].upVote = this.quote[index].upVote + 1;
+  }
+
+  downVote(index) {
+    this.quote[index].downVote = this.quote[index].downVote + 1;
   }
 
   constructor() {}

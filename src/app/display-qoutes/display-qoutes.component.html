@@ -2,10 +2,11 @@
   <div *ngFor="let quote of quotes; let i = index" class="card">
     {{ quote.author }}
     {{ quote.quote }}
-    {{ quote.timePast }}
+    {{ quote.timePast | timePassed }}
     <app-display-quote-details
       [quote]="quotes"
       [index]="i"
     ></app-display-quote-details>
+    <div class="btn btn-danger m-2" (click)="deleteQuote(i)">Delete Quote</div>
   </div>
 </div>
