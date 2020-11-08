@@ -1,26 +1,21 @@
-<form #goalForm="ngForm" (ngSubmit)="submitQuote()">
-  <div class="form-group">
-    <label for="quote">QUOTE</label>
-    <textarea
-      name="quotes"
-      [(ngModel)]="newQuote.quote"
-      id=""
-      class="form-control"
-      cols="30"
-      rows="5"
-      name="quote"
-    ></textarea>
-    {{ newQuote.quote }}
-  </div>
+<form #quoteForm="ngForm" (ngSubmit)="submitQuote()">
   <div class="row">
     <div class="form-group col">
       <label for="author">AUTHOR</label>
       <input
-        type="text"
+        type="email"
         [(ngModel)]="newQuote.author"
+        #author="ngModel"
         class="form-control"
         name="author"
+        required
       />
+      <div
+        *ngIf="!author.valid && author.touched"
+        class="alert alert-danger m-2"
+      >
+        Author is required
+      </div>
     </div>
     <div class="form-group col">
       <label for="quote-submitter">QUOTE SUBMITTER</label>
@@ -28,10 +23,35 @@
         type="text"
         class="form-control"
         [(ngModel)]="newQuote.quoteSubmitter"
+        #quoteSubmitter="ngModel"
         name="quoteSubmitter"
+        required
       />
-      {{ newQuote.quoteSubmitter }}
+      <div
+        *ngIf="!quoteSubmitter.valid && quoteSubmitter.touched"
+        class="alert alert-danger m-2"
+      >
+        Quote Submitter is required
+      </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <div class="form-group">
+    <label for="quote">QUOTE</label>
+    <textarea
+      name="quotes"
+      [(ngModel)]="newQuote.quote"
+      #quote="ngModel"
+      class="form-control"
+      cols="20"
+      rows="3"
+      name="quote"
+      required
+    ></textarea>
+    <div *ngIf="!quote.valid && quote.touched" class="alert alert-danger m-2">
+      Quote is required
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!quoteForm.valid">
+    Submit
+  </button>
 </form>

@@ -1,9 +1,15 @@
-<div>
+<div class="p-2">
   <h1>QUOTES</h1>
   <hr />
-  <app-form-quotes (addQuote)="addNewQuote($event)"></app-form-quotes>
-  <app-display-qoutes
-    [quotes]="quotes"
-    (toDelete)="delete($event)"
-  ></app-display-qoutes>
+  <div class="row">
+    <div class="col-5 my-auto jumbotron rounded">
+      <app-form-quotes (addQuote)="addNewQuote($event)"></app-form-quotes>
+    </div>
+    <div class="col-7">
+      <app-display-qoutes
+        [quotes]="quotes"
+        (toDelete)="delete($event)"
+      ></app-display-qoutes>
+    </div>
+  </div>
 </div>
