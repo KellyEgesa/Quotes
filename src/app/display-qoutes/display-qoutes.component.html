@@ -1,5 +1,11 @@
 <div>
-  <div *ngFor="let quote of quotes" class="card">
+  <div *ngFor="let quote of quotes; let i = index" class="card">
+    {{ quote.author }}
+    {{ quote.quote }}
     {{ quote.timePast }}
+    <app-display-quote-details
+      [quote]="quotes"
+      [index]="i"
+    ></app-display-quote-details>
   </div>
 </div>

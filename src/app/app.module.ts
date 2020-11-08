@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormQuotesComponent } from './form-quotes/form-quotes.component';
 import { DisplayQoutesComponent } from './display-qoutes/display-qoutes.component';
+import { DisplayQuoteDetailsComponent } from './display-quote-details/display-quote-details.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { DisplayQoutesComponent } from './display-qoutes/display-qoutes.componen
     QuoteComponent,
     FormQuotesComponent,
     DisplayQoutesComponent,
+    DisplayQuoteDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
