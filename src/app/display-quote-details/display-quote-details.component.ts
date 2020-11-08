@@ -9,6 +9,11 @@ import { Quote } from '../quote';
 export class DisplayQuoteDetailsComponent implements OnInit {
   @Input() quote: Quote;
   @Input() index: number;
+
+  upVote(index) {
+    this.quote[index].upVote = this.quote[index].upVote + 1;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}
