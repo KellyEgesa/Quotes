@@ -1,6 +1,6 @@
 export class Quote {
   constructor(
-    public author,
+    public author: string,
     public quote: string,
     public quoteSubmitter: string,
     public upVote: number,
