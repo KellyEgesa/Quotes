@@ -1,7 +1,8 @@
 <div>
   <div
     *ngFor="let quote of quotes; let i = index"
-    class="card p-2 m-2 text-center d-flex"
+    class="card p-2 m-2 text-center d-flex text-white bg-dark"
+    appHighlight
   >
     <div id="quote">"{{ quote.quote }}"</div>
     <div>

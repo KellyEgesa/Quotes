@@ -1,10 +1,12 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
+import { Quote } from './quote';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[appHighlight]',
 })
 export class HighlightDirective {
+  @Input() quotes: Quote;
+  @Input() index: number;
 
-  constructor() { }
-
+  constructor(private elem: ElementRef) {}
 }
