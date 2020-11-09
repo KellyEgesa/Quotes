@@ -39,7 +39,7 @@ export class QuoteComponent implements OnInit {
 
   delete(index) {
     let toDelete = confirm(
-      `Are you sure you want to delete ${this.quotes[index].quote}?`
+      `Are you sure you want to delete "${this.quotes[index].quote}"?`
     );
 
     if (toDelete) {

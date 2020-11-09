@@ -2,10 +2,10 @@
   <h1 class="text-center">QUOTES</h1>
   <hr />
   <div class="row">
-    <div class="col-5 my-auto jumbotron rounded">
+    <div class="col-4 my-auto jumbotron rounded">
       <app-form-quotes (addQuote)="addNewQuote($event)"></app-form-quotes>
     </div>
-    <div class="col-7">
+    <div class="col-8">
       <app-display-qoutes
         [quotes]="quotes"
         (toDelete)="delete($event)"
