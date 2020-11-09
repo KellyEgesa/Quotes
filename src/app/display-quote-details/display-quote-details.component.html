@@ -1,9 +1,13 @@
 <div>
-  {{ quote[index].quoteSubmitter }}
-  <div (click)="upVote(index)" class="btn btn-primary m-2">
+  <div id="quoteDetails">
+    {{ quote[index].timePast | timePassed }} by
+    {{ quote[index].quoteSubmitter }}
+  </div>
+  <div (click)="upVote(index)" class="btn btn-primary btn-sm m-2">
     UPVOTE <span class="badge badge-success">{{ quote[index].upVote }} </span>
   </div>
-  <div (click)="downVote(index)" class="btn btn-primary m-2">
-    DOWNVOTE <span class="badge badge-danger">{{ quote[index].downVote }}</span>
+  <div (click)="downVote(index)" class="btn btn-primary m-2 btn-sm">
+    DOWNVOTE
+    <span class="badge badge-warning">{{ quote[index].downVote }}</span>
   </div>
 </div>

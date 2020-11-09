@@ -9,6 +9,7 @@ import { FormQuotesComponent } from './form-quotes/form-quotes.component';
 import { DisplayQoutesComponent } from './display-qoutes/display-qoutes.component';
 import { DisplayQuoteDetailsComponent } from './display-quote-details/display-quote-details.component';
 import { TimePassedPipe } from './time-passed.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TimePassedPipe } from './time-passed.pipe';
     DisplayQoutesComponent,
     DisplayQuoteDetailsComponent,
     TimePassedPipe,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,12 +1,18 @@
 <div>
-  <div *ngFor="let quote of quotes; let i = index" class="card">
-    {{ quote.author }}
-    {{ quote.quote }}
-    {{ quote.timePast | timePassed }}
+  <div
+    *ngFor="let quote of quotes; let i = index"
+    class="card p-2 m-2 text-center d-flex"
+  >
+    <div id="quote">"{{ quote.quote }}"</div>
+    <div>
+      <cite title="Source Title"> Author : {{ quote.author }}</cite>
+    </div>
     <app-display-quote-details
       [quote]="quotes"
       [index]="i"
     ></app-display-quote-details>
-    <div class="btn btn-danger m-2" (click)="deleteQuote(i)">Delete Quote</div>
+    <div class="btn btn-danger m-2 ml-auto" (click)="deleteQuote(i)">
+      Delete Quote
+    </div>
   </div>
 </div>
