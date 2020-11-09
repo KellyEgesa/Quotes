@@ -1,6 +1,28 @@
 # Quotes
 
+#### An application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational, Friday 6th November 2020
+
+#### By **Bartholomew Kelly Egesa**
+
+https://kellyegesa.github.io/Quotes/ - Link to the webpage.
+
+## Description
+
+A user uploads a quote and submits the author and his name and the quote is then displayed showing all the quote details and shows the time passed since the quote was uploaded. Other users can vote whether the quotes are terrible or are inspirational
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+
+## Behavior Driven Development
+
+| BEHAVIOR:Our program should handle | Input Example When it receives |      Output Example It should return      |
+| ---------------------------------- | :----------------------------: | :---------------------------------------: |
+| Enter a quote                      |        I am inevitable         |    A quote is added :'I am inevitable'    |
+| Enter the author                   |             Thanos             |          Author added :'Thanos'           |
+| Enter the quote submitter          |          Kelly Egesa           | A quote submitter is added :'Kelly Egesa' |
+| Submit                             |          Click submit          |           A new quote is added            |
+| Delete a quote                     |             delete             |             Quote is deleted              |
+| Up vote a quote                    |            up vote             |          Uploads increases by 1           |
+| Down vote a quote                  |           down vote            |         Downvotes increases by 1          |
 
 ## Development server
 
